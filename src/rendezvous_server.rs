@@ -173,7 +173,10 @@ impl RendezvousServer {
                 mask,
                 local_ip,
             }),
-            outbound_whitelist: Arc::new(Self::load_outbound_whitelist("whitelist.txt")),
+            outbound_whitelist: Arc::new(Self::load_outbound_whitelist(&get_arg_or(
+                "whitelist",
+                "whitelist.txt".to_owned(),
+            ))),
         };
         log::info!("mask: {:?}", rs.inner.mask);
         log::info!("local-ip: {:?}", rs.inner.local_ip);
