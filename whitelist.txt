@@ -1,0 +1,3 @@
+# IDs autorizados para iniciar conexiones salientes (A -> B)
+# Un ID por línea. Líneas vacías y líneas que empiezan con # se ignoran.
+
